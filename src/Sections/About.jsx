@@ -3,7 +3,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="w-full bg-white">
+    <section id="about" className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-20">
         {/* Grid: left big title (approx 1/2) | right content (1/2) */}
         <div className="grid grid-cols-12 gap-6 items-start">

@@ -10,7 +10,7 @@ export default function Projects() {
   const [showTable, setShowTable] = useState(false);
 
   return (
-    <section className="w-full bg-white py-12 px-6 md:px-20">
+    <section id="projects" className="w-full bg-white py-12 px-6 md:px-20">
 
       {/* ================= HEADER ================= */}
       <div className="flex justify-between items-start w-full mb-10">

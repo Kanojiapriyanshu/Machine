@@ -16,7 +16,7 @@ import ImgGreenLogo from "../assets/icons/image 28.png";
 
 export default function Clients() {
   return (
-    <section className="w-full bg-white">
+    <section id="clients" className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-10">
         
         {/* Heading */}

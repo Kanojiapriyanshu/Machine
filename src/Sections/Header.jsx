@@ -36,11 +36,11 @@ export default function Header() {
           {/* Center / Right navigation (desktop) */}
           <nav className="hidden md:flex items-center gap-12">
             <ul className="flex items-center gap-10 text-[18px] font-semibold text-gray-700">
-              <li><a href="/about" className="hover:text-gray-900">About</a></li>
-              <li><a href="/projects" className="hover:text-gray-900">Projects</a></li>
-              <li><a href="/industries" className="hover:text-gray-900">Industries</a></li>
-              <li><a href="/services" className="hover:text-gray-900">Services</a></li>
-              <li><a href="/clients" className="hover:text-gray-900">Clients</a></li>
+              <li><a href="#about" className="hover:text-gray-900">About</a></li>
+              <li><a href="#projects" className="hover:text-gray-900">Projects</a></li>
+              <li><a href="#industries" className="hover:text-gray-900">Industries</a></li>
+              <li><a href="#services" className="hover:text-gray-900">Services</a></li>
+              <li><a href="#clients" className="hover:text-gray-900">Clients</a></li>
             </ul>
           </nav>
 
@@ -84,11 +84,11 @@ export default function Header() {
         <div className="md:hidden bg-white border-t">
           <div className="max-w-[1400px] mx-auto px-6 py-4">
             <ul className="flex flex-col gap-3 text-gray-800 font-medium">
-              <li><a className="block py-2" href="/about" onClick={() => setOpen(false)}>About</a></li>
-              <li><a className="block py-2" href="/projects" onClick={() => setOpen(false)}>Projects</a></li>
-              <li><a className="block py-2" href="/industries" onClick={() => setOpen(false)}>Industries</a></li>
-              <li><a className="block py-2" href="/services" onClick={() => setOpen(false)}>Services</a></li>
-              <li><a className="block py-2" href="/clients" onClick={() => setOpen(false)}>Clients</a></li>
+              <li><a className="block py-2" href="#about" onClick={() => setOpen(false)}>About</a></li>
+              <li><a className="block py-2" href="#projects" onClick={() => setOpen(false)}>Projects</a></li>
+              <li><a className="block py-2" href="#industries" onClick={() => setOpen(false)}>Industries</a></li>
+              <li><a className="block py-2" href="#services" onClick={() => setOpen(false)}>Services</a></li>
+              <li><a className="block py-2" href="#clients" onClick={() => setOpen(false)}>Clients</a></li>
               <li className="pt-2">
                 <a
                   href="/contact"

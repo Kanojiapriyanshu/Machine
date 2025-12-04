@@ -60,7 +60,7 @@ export default function Services() {
   const outerHeightStyle = { height: `${count * 100}vh` };
 
   return (
-    <section className="w-full bg-white">
+    <section id="services" className="w-full bg-white">
       {/* Heading (full-width) */}
       <div className="w-full px-6 md:px-12 lg:px-24 py-12 max-w-none">
         <p className="text-lg tracking-wide text-[#4b5c5a]">OUR CORE SERVICES</p>

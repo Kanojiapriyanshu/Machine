@@ -45,7 +45,7 @@ const items = [
 
 export default function WhatWeDo() {
   return (
-    <section className="w-full bg-white">
+    <section id="industries" className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-14">
         {/* grid: left list (8 cols) | divider (1 col) | right block (3 cols) */}
         <div className="grid grid-cols-12 gap-6">
@@ -83,7 +83,7 @@ export default function WhatWeDo() {
             <div className="h-full border-l border-gray-200" />
           </div>
 
-          {/* RIGHT block */}
+          {/* RIGHT bloc */}
           <div className="col-span-12 md:col-span-3 flex items-start">
             <div className="pl-6 md:pl-10 pt-2">
               <div className="text-sm tracking-wider text-[#6b7a79]">WHAT WE DO</div>
