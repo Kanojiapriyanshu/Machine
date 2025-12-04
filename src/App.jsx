@@ -14,6 +14,7 @@ import Client from "./Sections/Client";
 import Footer from "./Sections/Footer";
 import Gallery from "./Sections/Gallery";
 import Project from "./Sections/Project";
+import Services from "./Sections/Services";
 import "./index.css"; // Tailwind styles
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Whatwedo />
         <Choose />
         <Count />
+        <Services />
         <Howwork />
         <Client />
         <Project />
