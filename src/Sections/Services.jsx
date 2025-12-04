@@ -2,11 +2,13 @@
 import React from "react";
 
 /*
-  Services.jsx (updated)
-  - Each service row is now an equal 50/50 partition on md+ (image left, content right)
-  - Heights are equalized using fixed row height at different breakpoints
-  - Right panel alternates background (lime for every second row) like your reference
-  - Images are loaded via Vite-safe new URL(...) so they display correctly
+  Stacking Services section:
+  - Outer height = services.length * 100vh
+  - Each card is sticky and fills the viewport (h-screen)
+  - zIndex = idx + 1 so later cards (when scrolled to) appear on top of earlier ones
+  - Responsive fallback on small screens (no sticky)
+  - Images loaded through Vite-safe URLs (new URL(...).href)
+  - Reference PDF (local): /mnt/data/Energetic_v2_1.pdf
 */
 
 const img1 = new URL("../assets/images/img1.png", import.meta.url).href;
@@ -54,60 +56,67 @@ const SERVICES = [
 ];
 
 export default function Services() {
+  const count = SERVICES.length;
+  const outerHeightStyle = { height: `${count * 100}vh` };
+
   return (
     <section className="w-full bg-white">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-12">
-        {/* heading */}
-        <div className="mb-8">
-          <p className="text-xs tracking-wide text-[#4b5c5a]">OUR CORE SERVICES</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-[#1B2D2A] leading-tight">
-            Expertise That Drives <br /> Industrial Performance
-          </h2>
-        </div>
+      {/* Heading (full-width) */}
+      <div className="w-full px-6 md:px-12 lg:px-24 py-12 max-w-none">
+        <p className="text-lg tracking-wide text-[#4b5c5a]">OUR CORE SERVICES</p>
+        <h2 className="text-3xl md:text-4xl font-serif text-[#1B2D2A] leading-tight">
+          Expertise That Drives <br /> Industrial Performance
+        </h2>
+      </div>
 
-        {/* stacked rows, each row is a 2-column split (50/50) */}
-        <div className="flex flex-col divide-y divide-gray-200">
+      {/* stacking area */}
+      <div className="w-full relative" style={outerHeightStyle}>
+        <div className="w-full h-full">
           {SERVICES.map((s, idx) => {
-            const isAlt = idx % 2 === 1; // alternate right panel color
+            const isAlt = idx % 2 === 1;
+            // IMPORTANT: zIndex increases with idx so later cards appear above earlier ones
+            const zIndex = idx + 1;
+
             return (
               <div
                 key={s.id}
-                className="grid grid-cols-1 md:grid-cols-2 items-stretch"
+                // sticky card: top:0, full viewport height
+                className="w-full h-screen sticky top-0 flex items-center"
+                style={{ zIndex }}
               >
-                {/* LEFT: image (50%) */}
-                <div className="w-full">
-                  <div className="w-full h-[280px] md:h-[420px] overflow-hidden">
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch h-full">
+                  {/* LEFT: image */}
+                  <div className="w-full h-full">
                     <img
                       src={s.img}
                       alt={s.title}
                       className="w-full h-full object-cover block"
                     />
                   </div>
-                </div>
 
-                {/* RIGHT: content panel (50%) */}
-                <div
-                  className={`flex items-center justify-center p-8 border-t md:border-t-0 md:border-l border-gray-200 ${
-                    isAlt ? "bg-[#E6F89B]" : "bg-white"
-                  }`}
-                >
-                  <div className="max-w-[360px] text-left">
-                    <h3 className="font-serif text-2xl md:text-3xl leading-snug text-[#142f2a]">
-                      {s.title}
-                    </h3>
-                    <p className="mt-3 text-sm md:text-base text-[#4b5b5b]">
-                      {s.desc}
-                    </p>
+                  {/* RIGHT: content */}
+                  <div
+                    className={`flex items-center justify-center p-10 md:p-16 border-t md:border-t-0 md:border-l border-gray-200 ${
+                      isAlt ? "bg-[#E6F89B]" : "bg-white"
+                    }`}
+                  >
+                    <div className="max-w-[720px] text-left">
+                      <h3 className="font-serif text-2xl md:text-3xl leading-snug text-[#142f2a]">
+                        {s.title}
+                      </h3>
+                      <p className="mt-4 text-sm md:text-base text-[#4b5b5b]">
+                        {s.desc}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-
-        {/* thin divider */}
-        <div className="h-px bg-gray-200 mt-8" />
       </div>
+
+      <div className="h-px bg-gray-200" />
     </section>
   );
 }
