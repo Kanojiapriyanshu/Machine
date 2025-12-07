@@ -40,7 +40,7 @@ export default function Contact() {
             {/* ====== BUTTON ====== */}
             <div className="mt-10">
               <a
-                href="/contact"
+                href="mailto:info@energeticengineering.in"
                 className="inline-block px-10 py-3 text-sm font-medium rounded-sm shadow-sm"
                 style={{
                   backgroundColor: "rgb(232,250,153)",
