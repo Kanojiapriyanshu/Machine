@@ -144,7 +144,7 @@ export default function Footer() {
           <div>© 2025 Energetic Engineering Co. All Rights Reserved.</div>
 
           <div className="flex items-center gap-4">
-            <div className="text-[11px] text-[#9aa8a8]">Designed by</div>
+            {/* <div className="text-[11px] text-[#9aa8a8]">Designed by</div> */}
             <img src={NowtLogo} alt="Designed by Nowt" className="h-5 object-contain" />
           </div>
         </div>
