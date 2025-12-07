@@ -1,7 +1,7 @@
 // src/Sections/Footer.jsx
 import React from "react";
 
-/* Vite-safe imports (adjust filenames if yours differ) */
+/* Vite-safe imports */
 import Logo from "../assets/icons/logo.svg";
 import LinkedInLogo from "../assets/icons/LinkedinLogo.png";
 import PhoneIcon from "../assets/icons/Phone.png";
@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-12">
           <div className="grid grid-cols-12 gap-6 items-start">
 
-            {/* Left: Logo + Site Name + short text + social + copyright */}
+            {/* LEFT COLUMN */}
             <div className="col-span-12 md:col-span-4">
               <div className="flex flex-col h-full">
                 <div className="flex items-start gap-4 mb-4">
@@ -49,11 +49,11 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Right: navigation + contact + locations */}
+            {/* RIGHT COLUMN */}
             <div className="col-span-12 md:col-span-8">
-              <div className="pl-0 md:pl-10 border-l md:border-l border-transparent md:border-gray-200">
+              <div className="pl-0 md:pl-10 border-l md:border-gray-200">
 
-                {/* Top nav centered */}
+                {/* NAV LINKS */}
                 <div className="flex justify-center mb-6">
                   <nav aria-label="Footer navigation" className="w-full max-w-[760px]">
                     <ul className="flex flex-wrap justify-center gap-8 text-sm text-[#5f6f6e]">
@@ -67,54 +67,68 @@ export default function Footer() {
                   </nav>
                 </div>
 
-                {/* CONTACT US heading & two-column contact block */}
+                {/* CONTACT SECTION */}
                 <div className="max-w-[1000px] mx-auto">
                   <h4 className="text-sm font-semibold text-[#334746] mb-4">CONTACT US</h4>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-[#496162] mb-8">
-                    {/* Left: phones / landline note */}
+
+                    {/* 📱 MOBILE NUMBERS */}
                     <div>
+                      <div className="text-xs font-semibold text-[#334746] mb-1">MOBILE</div>
                       <div className="flex items-start gap-3 mb-3">
                         <img src={PhoneIcon} alt="mobile" className="w-5 h-5 mt-1 opacity-90" />
                         <div>
-                          <a href="tel:+919416208038" className="block hover:underline">+91 9416208038</a>
-                          <a href="tel:+911802972737" className="block mt-1 hover:underline">+91 1802 97 2737</a>
+                          <a href="tel:+919416208038" className="block hover:underline">
+                            +91 9416208038
+                          </a>
+                          
                         </div>
                       </div>
 
+                      {/* ☎ LANDLINE */}
+                      <div className="text-xs font-semibold text-[#334746] mt-4 mb-1">LANDLINE</div>
                       <div className="flex items-start gap-3">
                         <img src={LandlineIcon} alt="landline" className="w-5 h-5 mt-1 opacity-90" />
-                        <div className="text-xs text-[#6b7a79]">
-                          (Office lines available during business hours)
+                        <div>
+                          <a href="tel:+911802972737" className="block hover:underline">
+                            +91 1802 97 2737
+                          </a>
+                          <div className="text-xs text-[#6b7a79]">
+                            (Office lines available during business hours)
+                          </div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Right: email + website */}
+                    {/* ✉ EMAIL + 🌐 WEBSITE */}
                     <div>
                       <div className="flex items-start gap-3 mb-3">
                         <img src={EnvelopeIcon} alt="email" className="w-5 h-5 mt-1 opacity-90" />
-                        <a href="mailto:info@energeticengineering.in" className="hover:underline">info@energeticengineering.in</a>
+                        <a href="mailto:info@energeticengineering.in" className="hover:underline">
+                          info@energeticengineering.in
+                        </a>
                       </div>
 
                       <div className="flex items-start gap-3">
                         <img src={GlobeIcon} alt="website" className="w-5 h-5 mt-1 opacity-90" />
-                        <a href="https://www.energeticengineering.in" className="hover:underline">www.energeticengineering.in</a>
+                        <a href="https://www.energeticengineering.in" className="hover:underline">
+                          www.energeticengineering.in
+                        </a>
                       </div>
                     </div>
                   </div>
 
-                  {/* thin divider */}
+                  {/* Divider */}
                   <div className="h-px bg-gray-100 mb-8" />
 
-                  {/* Locations (2 columns) */}
+                  {/* LOCATIONS */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs text-[#6b7a79]">
                     <div>
                       <div className="text-sm font-semibold text-[#334746] mb-2">LOCATION</div>
                       <div className="font-semibold text-[13px] mb-2">PANIPAT (HEAD OFFICE)</div>
                       <div>
-                        P O Dadlana, Opposite New Indian Oil Petrol Pump, Refinery Road,
-                        <br />
+                        P O Dadlana, Opposite New Indian Oil Petrol Pump, Refinery Road,<br />
                         Panipat-132103, Haryana, India
                       </div>
                     </div>
@@ -123,8 +137,7 @@ export default function Footer() {
                       <div className="text-sm font-semibold text-[#334746] mb-2">LOCATION</div>
                       <div className="font-semibold text-[13px] mb-2">BARAUNI (BRANCH OFFICE)</div>
                       <div>
-                        Branch office address - At Rupaspur, P.O. Barauni Oil Refinery Distt. Begusarai-
-                        <br />
+                        Branch office address - At Rupaspur, P.O. Barauni Oil Refinery Distt. Begusarai-<br />
                         851114 Bihar, India
                       </div>
                     </div>
@@ -138,13 +151,12 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar with copyright + designer badge (right aligned) */}
+      {/* Bottom Bar */}
       <div className="w-full bg-white border-t border-gray-100">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-4 flex items-center justify-between text-xs text-[#9aa8a8]">
           <div>© 2025 Energetic Engineering Co. All Rights Reserved.</div>
 
           <div className="flex items-center gap-4">
-            {/* <div className="text-[11px] text-[#9aa8a8]">Designed by</div> */}
             <img src={NowtLogo} alt="Designed by Nowt" className="h-5 object-contain" />
           </div>
         </div>
