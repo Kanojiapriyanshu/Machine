@@ -20,7 +20,7 @@ export default function Count() {
   return (
     <section className="w-full bg-white py-6">
       {/* top thin border to match reference */}
-      <div className="border-b border-gray-200" />
+      {/* <div className="border-b border-gray-200" /> */}
 
       <div className="relative overflow-hidden">
         {/* left/right soft fade masks to make items appear/disappear smoothly */}
@@ -44,7 +44,7 @@ export default function Count() {
             >
               {/* Large serif number — match the screenshot */}
               <div
-                className="font-serif text-[#16202a] font-bold"
+                className="font-serif text-[#16202a] font"
                 style={{ fontSize: "48px", lineHeight: 1 }}
               >
                 {m.value}

@@ -14,7 +14,7 @@ export default function About() {
               style={{
                 fontSize: "5rem", /* tuned for look in screenshot */
                 lineHeight: 1.02,
-                fontWeight: 700,
+                fontWeight: 300,
                 maxWidth: "680px",
               }}
             >

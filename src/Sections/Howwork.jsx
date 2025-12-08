@@ -1,13 +1,5 @@
 import React from "react";
 
-/**
- * HowItWorks.jsx
- * Place at: src/Sections/HowItWorks.jsx
- *
- * Uses Tailwind CSS. Make sure src/index.css includes the font import and @tailwind directives.
- * Layout: 12-column grid where left title occupies full width above, then below a 4-column row of steps.
- */
-
 const steps = [
   {
     id: 1,
@@ -42,9 +34,12 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section className="w-full bg-white">
-      <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-12">
-        {/* Title area */}
-        <div className="mb-8">
+
+      {/* Full width container */}
+      <div className="w-full border-t border-gray-200">
+
+        {/* Title Section (centered) */}
+        <div className="max-w-[1400px] mx-auto px-8 md:px-12 lg:px-20 py-16">
           <div className="text-sm tracking-wider text-[#6b7a79]">HOW IT WORKS</div>
           <h2
             className="font-serif text-[#16202a] mt-4"
@@ -56,35 +51,28 @@ export default function HowItWorks() {
           </h2>
         </div>
 
-        {/* thin divider above steps */}
-        <div className="h-px bg-gray-200" />
+        {/* FULL WIDTH 4 COLUMN SECTION */}
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-t border-b border-gray-200">
 
-        {/* Steps row */}
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-4 border-t border-gray-100">
-          {steps.map((s, idx) => (
+          {steps.map((s, index) => (
             <div
               key={s.id}
-              className={`relative bg-white p-10 md:p-12 border-b border-gray-100 ${
-                idx < 3 ? "md:border-r md:border-gray-100" : ""
-              }`}
+              className="bg-white p-10 md:p-12 border-gray-200 border-b sm:border-b md:border-b-0 md:border-r last:border-r-0"
             >
-              {/* Number in pale gray */}
               <div className="text-2xl md:text-3xl text-gray-300 font-medium">{s.number}</div>
 
-              <h3 className="mt-6 text-lg md:text-xl text-[#1f2b2d] font-medium">
-                {s.title}
-              </h3>
+              <h3 className="mt-6 text-lg md:text-xl text-[#1f2b2d] font-medium">{s.title}</h3>
 
-              <p className="mt-4 text-sm md:text-[15px] text-[#4b5b5f] leading-relaxed max-w-[320px]">
+              <p className="mt-4 text-sm md:text-[15px] text-[#4b5b5f] leading-relaxed">
                 {s.desc}
               </p>
             </div>
           ))}
+
         </div>
 
-        {/* bottom divider */}
-        <div className="h-px bg-gray-200 mt-6" />
       </div>
+
     </section>
   );
 }

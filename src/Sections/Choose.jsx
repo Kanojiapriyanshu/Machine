@@ -1,13 +1,13 @@
 import React from "react";
 
-/* Icons (place these files in src/assets/icons/) */
+/* Icons */
 import IconHours from "../assets/icons/HourglassMedium.svg";
 import IconCertificate from "../assets/icons/Certificate.svg";
 import IconTimer from "../assets/icons/Timer.svg";
 import IconUsers from "../assets/icons/Users.svg";
 import IconHardHat from "../assets/icons/HardHat.svg";
 
-/* Certification badges (place these in src/assets/images/) */
+/* Certifications */
 import Cert1 from "../assets/icons/image 33.svg";
 import Cert2 from "../assets/icons/image 34.svg";
 import Cert3 from "../assets/icons/image 35.svg";
@@ -54,19 +54,21 @@ export default function Choose() {
   return (
     <section className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-16">
-        {/* Grid: left(5 cols) | divider(1) | right(6 cols) */}
-        <div className="grid grid-cols-12 gap-6 items-start">
-          {/* LEFT block */}
-          <div className="col-span-12 md:col-span-5">
-            <div className="pr-6 md:pr-12">
-              <div className="text-sm tracking-wider text-[#6b7a79]">WHY CHOOSE US</div>
+        {/* 50 / 50 layout with vertical divider */}
+        <div className="flex flex-col md:flex-row w-full items-stretch">
+          {/* LEFT SIDE */}
+          <div className="w-full md:w-1/2 pr-0 md:pr-12">
+            <div>
+              <div className="text-sm tracking-wider text-[#6b7a79] uppercase">
+                WHY CHOOSE US
+              </div>
 
               <h2
                 className="font-serif text-[#1f2b2d] mt-4"
                 style={{
                   fontSize: "2.8rem",
                   lineHeight: 1.05,
-                  fontWeight: 700,
+                  fontWeight: 300,
                   maxWidth: "520px",
                 }}
               >
@@ -75,36 +77,52 @@ export default function Choose() {
 
               <a
                 href="/contact"
-                className="mt-6 inline-flex items-center gap-3 text-black font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+                className="mt-6 inline-flex items-center gap-3 text-black font-medium"
               >
                 <span>Contact us</span>
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden
+                >
+                  <path
+                    d="M5 12h14M13 5l7 7-7 7"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </a>
 
-              {/* Certification badges aligned at bottom-left */}
-              <div className="mt-10 md:mt-16 flex items-center gap-6">
-                <img src={Cert1} alt="certification 1" className="w-20 h-auto" />
-                <img src={Cert2} alt="certification 2" className="w-20 h-auto" />
-                <img src={Cert3} alt="certification 3" className="w-20 h-auto" />
+              {/* Certification logos */}
+              <div className="mt-70 flex items-center gap-6">
+                <img src={Cert1} alt="Certification 1" className="w-20 h-auto" />
+                <img src={Cert2} alt="Certification 2" className="w-20 h-auto" />
+                <img src={Cert3} alt="Certification 3" className="w-20 h-auto" />
               </div>
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="hidden md:block col-span-1">
-            <div className="h-full border-l border-gray-200" />
+          {/* VERTICAL DIVIDER */}
+          <div className="hidden md:flex mx-8 self-stretch">
+            <div className="w-px bg-gray-300" />
           </div>
 
-          {/* RIGHT: features list */}
-          <div className="col-span-12 md:col-span-6">
+          {/* RIGHT SIDE */}
+          <div className="w-full md:w-1/2 pl-0 md:pl-12 mt-10 md:mt-0">
             <div className="space-y-8">
               {features.map((f) => (
                 <div key={f.id} className="flex gap-6 items-start">
                   {/* icon */}
                   <div className="flex-shrink-0 pt-1 w-12">
-                    <img src={f.icon} alt={`${f.title} icon`} className="w-8 h-8 md:w-10 md:h-10" />
+                    <img
+                      src={f.icon}
+                      alt={`${f.title} icon`}
+                      className="w-8 h-8 md:w-10 md:h-8"
+                    />
                   </div>
 
                   {/* text */}
@@ -123,7 +141,7 @@ export default function Choose() {
         </div>
       </div>
 
-      {/* bottom divider like in design */}
+      {/* bottom divider */}
       <div className="h-px bg-gray-200" />
     </section>
   );

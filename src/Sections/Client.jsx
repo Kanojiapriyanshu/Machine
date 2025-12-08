@@ -18,59 +18,56 @@ import ImgGreenLogo from "../assets/icons/image 28.png";
 export default function Clients() {
   return (
     <section id="clients" className="w-full bg-white">
-      
-      <div className="w-full max-w-[1600px] mx-auto px-6 md:px-10 py-16">
 
-        {/* Heading */}
-        <div className="mb-12">
-          <p className="text-[13px] tracking-[1.5px] text-[#6b7a79] uppercase">
-            Our Clients
-          </p>
+      {/* Title Section (centered) */}
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 py-16">
+        <p className="text-[13px] tracking-[1.5px] text-[#6b7a79] uppercase">
+          Our Clients
+        </p>
 
-          <h2 className="mt-4 font-serif text-[#16202a] font-semibold leading-tight"
-              style={{ fontSize: "3rem" }}>
-            Companies we have<br />worked with
-          </h2>
-        </div>
-
-        {/* GRID */}
-        <div className="border-t border-gray-200">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 border-l border-gray-200">
-
-            <ClientBox img={ImgIndianOil} />
-            <ClientBox img={ImgHRRL} />
-            <ClientBox img={ImgBHEL} />
-            <ClientBox img={ImgEIL} />
-
-            <ClientBox img={ImgDEE} />
-            <ClientBox img={ImgKSS} />
-            <ClientBox img={ImgMRPL} />
-            <ClientBox img={ImgToyo} />
-
-            <ClientBox img={ImgHPCL} />
-            <ClientBox img={ImgAnother1} />
-            <ClientBox img={ImgHMEL} />
-            <ClientBox img={ImgGreenLogo} />
-
-          </div>
-        </div>
-
+        <h2
+          className="mt-4 font-serif text-[#16202a]"
+          style={{ fontSize: "3rem", lineHeight: 1.05, fontWeight: 700 }}
+        >
+          Companies we have<br />worked with
+        </h2>
       </div>
 
-      <div className="h-px bg-gray-200" />
+      {/* FULL WIDTH GRID */}
+      <div className="w-full border-t border-b border-gray-200">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+
+          <ClientBox img={ImgIndianOil} />
+          <ClientBox img={ImgHRRL} />
+          <ClientBox img={ImgBHEL} />
+          <ClientBox img={ImgEIL} />
+
+          <ClientBox img={ImgDEE} />
+          <ClientBox img={ImgKSS} />
+          <ClientBox img={ImgMRPL} />
+          <ClientBox img={ImgToyo} />
+
+          <ClientBox img={ImgHPCL} />
+          <ClientBox img={ImgAnother1} />
+          <ClientBox img={ImgHMEL} />
+          <ClientBox img={ImgGreenLogo} />
+
+        </div>
+      </div>
+
     </section>
   );
 }
 
 
-// === TEMPLATE BOX ===
+// === BOX TEMPLATE (EACH LOGO) ===
 function ClientBox({ img }) {
   return (
-    <div className="border-r border-b border-gray-200 bg-white w-full h-[220px] flex items-center justify-center">
+    <div className="border-r border-b border-gray-200 bg-white h-[200px] flex items-center justify-center">
       <img
         src={img}
         alt="client"
-        className="max-h-[95px] max-w-[90%] object-contain"
+        className="max-h-[90px] max-w-[90%] object-contain"
       />
     </div>
   );

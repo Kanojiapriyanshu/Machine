@@ -47,45 +47,44 @@ export default function WhatWeDo() {
   return (
     <section id="industries" className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-14">
-        {/* grid: left list (8 cols) | divider (1 col) | right block (3 cols) */}
-        <div className="grid grid-cols-12 gap-6">
-          {/* LEFT list */}
-          <div className="col-span-12 md:col-span-8">
+
+        {/* === TRUE 50-50 FLEX GRID === */}
+        <div className="flex flex-col md:flex-row w-full">
+
+          {/* LEFT SIDE (50%) */}
+          <div className="w-full md:w-1/2 pr-0 md:pr-12">
             <div className="space-y-10">
               {items.map((item) => (
                 <div key={item.id} className="flex items-start gap-6">
-                  {/* icon column - fixed width so icons align vertically */}
+                  
                   <div className="w-12 flex-shrink-0 mt-1">
                     <img
                       src={item.icon}
                       alt={`${item.title} icon`}
-                      className="w-8 h-8 md:w-10 md:h-10"
-                      style={{ display: "block" }}
+                      className="w-8 h-8 md:w-6 md:h-10"
                     />
                   </div>
 
-                  {/* text */}
                   <div className="flex-1">
                     <h3 className="text-[20px] md:text-[22px] font-medium text-[#1f2b2d]">
                       {item.title}
                     </h3>
-                    <p className="mt-3 text-sm md:text-[15px] text-[#465656] leading-relaxed max-w-[740px]">
+                    <p className="mt-3 text-sm md:text-[15px] text-[#465656] leading-relaxed max-w-[720px]">
                       {item.desc}
                     </p>
                   </div>
+
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Divider: shown only md+ (thin full-height line) */}
-          <div className="hidden md:block col-span-1">
-            <div className="h-full border-l border-gray-200" />
-          </div>
+          {/* CENTER DIVIDER */}
+          <div className="hidden md:block w-px bg-gray-200 mx-4" />
 
-          {/* RIGHT bloc */}
-          <div className="col-span-12 md:col-span-3 flex items-start">
-            <div className="pl-6 md:pl-10 pt-2">
+          {/* RIGHT SIDE (50%) */}
+          <div className="w-full md:w-1/2 pl-0 md:pl-12 mt-10 md:mt-0">
+            <div className="">
               <div className="text-sm tracking-wider text-[#6b7a79]">WHAT WE DO</div>
 
               <h2
@@ -93,7 +92,7 @@ export default function WhatWeDo() {
                 style={{
                   fontSize: "3.2rem",
                   lineHeight: 1.05,
-                  fontWeight: 700,
+                  fontWeight: 300,
                   maxWidth: "520px",
                 }}
               >
@@ -102,11 +101,17 @@ export default function WhatWeDo() {
 
               <a
                 href="/contact"
-                className="mt-6 inline-flex items-center gap-3 text-black font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+                className="mt-6 inline-flex items-center gap-3 text-black font-medium"
               >
                 <span>Contact us</span>
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 12h14M13 5l7 7-7 7"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </a>
             </div>
@@ -114,7 +119,7 @@ export default function WhatWeDo() {
         </div>
       </div>
 
-      {/* thin bottom border to match design */}
+      {/* Bottom border */}
       <div className="h-px bg-gray-200" />
     </section>
   );
