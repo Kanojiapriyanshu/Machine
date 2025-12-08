@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-24 relative">
 
         {/* ====== HORIZONTAL LINE TOP ====== */}
-        {/* <div className="w-full h-px bg-gray-200 mb-12" /> */}
+        
 
         <div className="flex justify-center text-center">
 
@@ -51,8 +51,7 @@ export default function Contact() {
               </a>
             </div>
 
-            {/* ====== HORIZONTAL LINE BOTTOM ====== */}
-            {/* <div className="w-full h-px bg-gray-200 mt-14" /> */}
+         
 
           </div>
         </div>

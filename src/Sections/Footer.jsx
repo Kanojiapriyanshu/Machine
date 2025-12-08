@@ -31,7 +31,7 @@ export default function Footer() {
                     <div className="font-serif text-lg text-[#122426] font-semibold">
                       Energetic
                     </div>
-                    <div className="font-serif text-base text-[#122426] -mt-0.5">
+                    <div className="font-serif text-base text-[#122426] -mt-0.5 font-semibold">
                       Engineering & Co.
                     </div>
                   </div>

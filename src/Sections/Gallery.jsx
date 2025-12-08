@@ -34,7 +34,7 @@ export default function Gallery() {
             <div className="text-sm tracking-wider text-[#6b7a79] mb-4">AT A GLANCE</div>
             <h2
               className="font-serif text-[#16202a]"
-              style={{ fontSize: "3.4rem", lineHeight: 1.02, fontWeight: 700 }}
+              style={{ fontSize: "3.4rem", lineHeight: 1.02, fontWeight: 300 }}
             >
               Gallery
             </h2>

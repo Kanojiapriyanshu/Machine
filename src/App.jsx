@@ -15,6 +15,7 @@ import Footer from "./Sections/Footer";
 import Gallery from "./Sections/Gallery";
 import Project from "./Sections/Project";
 import Services from "./Sections/Services";
+import ScrollTop from "./Sections/Scrolltotop"; // <-- added
 import "./index.css"; // Tailwind styles
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
         <Contact />
         <Footer />
 
-        {/* Add more sections here (Services, Projects, etc.) */}
+        {/* Floating arrow to top */}
+        <ScrollTop />   {/* <--- added */}
       </main>
     </div>
   );
