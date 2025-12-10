@@ -6,9 +6,7 @@ import React from "react";
   - Outer height = services.length * 100vh
   - Each card is sticky and fills the viewport (h-screen)
   - zIndex = idx + 1 so later cards (when scrolled to) appear on top of earlier ones
-  - Responsive fallback on small screens (no sticky)
   - Images loaded through Vite-safe URLs (new URL(...).href)
-  - Reference PDF (local): /mnt/data/Energetic_v2_1.pdf
 */
 
 const img1 = new URL("../assets/images/img1.png", import.meta.url).href;
@@ -74,13 +72,11 @@ export default function Services() {
         <div className="w-full h-full">
           {SERVICES.map((s, idx) => {
             const isAlt = idx % 2 === 1;
-            // IMPORTANT: zIndex increases with idx so later cards appear above earlier ones
-            const zIndex = idx + 1;
+            const zIndex = idx + 1; // higher index on top
 
             return (
               <div
                 key={s.id}
-                // sticky card: top:0, full viewport height
                 className="w-full h-screen sticky top-0 flex items-center"
                 style={{ zIndex }}
               >
@@ -94,13 +90,13 @@ export default function Services() {
                     />
                   </div>
 
-                  {/* RIGHT: content */}
+                  {/* RIGHT: content (centered) */}
                   <div
                     className={`flex items-center justify-center p-10 md:p-16 border-t md:border-t-0 md:border-l border-gray-200 ${
                       isAlt ? "bg-[#E6F89B]" : "bg-white"
                     }`}
                   >
-                    <div className="max-w-[720px] text-left">
+                    <div className="max-w-[720px] text-left mb-150">
                       <h3 className="font-serif text-2xl md:text-3xl leading-snug text-[#142f2a]">
                         {s.title}
                       </h3>

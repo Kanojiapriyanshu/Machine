@@ -44,7 +44,7 @@ export default function Count() {
             >
               {/* Large serif number — match the screenshot */}
               <div
-                className="font-serif text-[#16202a] font"
+                className="font-sans-serif text-[#16202a] font-semibold"
                 style={{ fontSize: "48px", lineHeight: 1 }}
               >
                 {m.value}

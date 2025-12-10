@@ -80,7 +80,7 @@ export default function WhatWeDo() {
           </div>
 
           {/* CENTER DIVIDER */}
-          <div className="hidden md:block w-px bg-gray-200 mx-4" />
+          <div className="hidden md:block w-px bg-gray-200 mx-8" />
 
           {/* RIGHT SIDE (50%) */}
           <div className="w-full md:w-1/2 pl-0 md:pl-12 mt-10 md:mt-0">

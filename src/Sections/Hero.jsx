@@ -29,7 +29,7 @@ export default function Hero() {
 
             {/* RIGHT - CONTENT WITH DIVIDER */}
             <div className="md:col-span-1 flex">
-              <div className="w-full border-l border-gray-200 pl-8 flex flex-col justify-center">
+              <div className="w-full border-l border-gray-300 pl-8 flex flex-col justify-center">
 
                 <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed">
                   Turnarounds, maintenance, and complete engineering solutions
