@@ -27,7 +27,7 @@ export default function Clients() {
 
         <h2
           className="mt-4 font-serif text-[#16202a]"
-          style={{ fontSize: "3rem", lineHeight: 1.05, fontWeight: 700 }}
+          style={{ fontSize: "3rem", lineHeight: 1.05, fontWeight: 300 }}
         >
           Companies we have<br />worked with
         </h2>

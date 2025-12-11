@@ -36,38 +36,78 @@ export default function Projects() {
         View the latest projects highlighting our execution capabilities — hover any image to view a short caption.
       </p>
 
-      {/* ====================== IMAGE GRID WITH LINES ====================== */}
+      {/* ====================== IMAGE GRID ====================== */}
       {!showTable && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 
-          {/* Card 1 */}
+          {/* Card 1 — PANIPAT */}
           <div className="relative group w-full h-[400px] overflow-hidden border border-gray-300">
             <img src={p1} alt="project 1" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-end p-5 text-white text-lg font-medium">
+
+            {/* Location Label */}
+            <div className="absolute bottom-3 right-3 px-3 py-1 text-xs font-medium 
+                            bg-black/60 text-white rounded-full opacity-0 
+                            group-hover:opacity-100 transition">
+              Panipat
+            </div>
+
+            <div className="absolute inset-0 bg-black/50 opacity-0 
+                            group-hover:opacity-100 transition flex items-end 
+                            p-5 text-white text-lg font-medium">
               Shutdown Job – SRU Block IOCL
             </div>
           </div>
 
-          {/* Card 2 */}
+          {/* Card 2 — HR */}
           <div className="relative group w-full h-[400px] overflow-hidden border border-gray-300">
             <img src={p2} alt="project 2" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-end p-5 text-white text-lg font-medium">
+
+            {/* Location Label */}
+            <div className="absolute bottom-3 right-3 px-3 py-1 text-xs font-medium 
+                            bg-black/60 text-white rounded-full opacity-0 
+                            group-hover:opacity-100 transition">
+              HR
+            </div>
+
+            <div className="absolute inset-0 bg-black/50 opacity-0 
+                            group-hover:opacity-100 transition flex items-end 
+                            p-5 text-white text-lg font-medium">
               On-Site Lifting Operation – HRRL
             </div>
           </div>
 
-          {/* Card 3 */}
+          {/* Card 3 — HR */}
           <div className="relative group w-full h-[400px] overflow-hidden border border-gray-300">
             <img src={p3} alt="project 3" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-end p-5 text-white text-lg font-medium">
+
+            {/* Location Label */}
+            <div className="absolute bottom-3 right-3 px-3 py-1 text-xs font-medium 
+                            bg-black/60 text-white rounded-full opacity-0 
+                            group-hover:opacity-100 transition">
+              HR
+            </div>
+
+            <div className="absolute inset-0 bg-black/50 opacity-0 
+                            group-hover:opacity-100 transition flex items-end 
+                            p-5 text-white text-lg font-medium">
               Fabrication & Piping – IOCL
             </div>
           </div>
 
-          {/* Card 4 */}
+          {/* Card 4 — HALDIA, WB */}
           <div className="relative group w-full h-[400px] overflow-hidden border border-gray-300">
             <img src={p4} alt="project 4" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-end p-5 text-white text-lg font-medium">
+
+            {/* Location Label */}
+            <div className="absolute bottom-3 right-3 px-3 py-1 text-xs font-medium 
+                            bg-black/60 text-white rounded-full opacity-0 
+                            group-hover:opacity-100 transition">
+              Haldia, WB
+            </div>
+
+            <div className="absolute inset-0 bg-black/50 opacity-0 
+                            group-hover:opacity-100 transition flex items-end 
+                            p-5 text-white text-lg font-medium">
               Mechanical Execution – MRPL
             </div>
           </div>
@@ -92,13 +132,11 @@ export default function Projects() {
             </thead>
 
             <tbody>
-              
+
               <tr>
                 <td className="border p-3">01</td>
                 <td className="border p-3">DEE/TPL/HRRL/EEC/01</td>
-                <td className="border p-3">
-                  WORK ORDER FOR ERECTION OF PIPING FOR DCU AT HRRL, PACHHADRA, DISST-BARMER
-                </td>
+                <td className="border p-3">WORK ORDER FOR ERECTION OF PIPING FOR DCU AT HRRL, BARMER</td>
                 <td className="border p-3">DEE PIPING HRRL</td>
                 <td className="border p-3">89,50,480.00</td>
                 <td className="border p-3">21.06.2021</td>
@@ -109,7 +147,7 @@ export default function Projects() {
                 <td className="border p-3">02</td>
                 <td className="border p-3">28708885</td>
                 <td className="border p-3">
-                  Shutdown Maintenance Jobs — Furnaces, Reactors, Columns, Vessels, Heat Exchangers & Misc. Piping jobs of VDU 1(U-31) at Haldia Refinery
+                  Shutdown Maintenance Jobs of VDU 1 at Haldia Refinery
                 </td>
                 <td className="border p-3">IOCL HALDIA REFINERY</td>
                 <td className="border p-3">3,41,39,297.05</td>
@@ -121,7 +159,7 @@ export default function Projects() {
                 <td className="border p-3">03</td>
                 <td className="border p-3">280000976</td>
                 <td className="border p-3">
-                  Replacement of Complete Assembly of Main & Acid Gas Flare Tip and Molecular Seal of PR, PRE & PX-PTA Block – IOCL Panipat
+                  Replacement of Flare Tip – IOCL Panipat
                 </td>
                 <td className="border p-3">IOCL PANIPAT REFINERY</td>
                 <td className="border p-3">2,99,74,130.18</td>
@@ -133,7 +171,7 @@ export default function Projects() {
                 <td className="border p-3">04</td>
                 <td className="border p-3">27928046</td>
                 <td className="border p-3">
-                  Replacement of Packinox Heat Exchanger and repair of leaky Packinox at DHDT Unit – IOCL Panipat
+                  Repair of Packinox Heat Exchanger – IOCL Panipat
                 </td>
                 <td className="border p-3">IOCL PANIPAT REFINERY</td>
                 <td className="border p-3">6,33,84,589.96</td>

@@ -23,7 +23,7 @@ export default function Header() {
               <div className="text-2xl font-serif font-bold text-gray-900 -mb-1">
                 Energetic
               </div>
-              <div className="text-base font-serif text-gray-800">
+              <div className="text-base font-serif font-bold text-gray-800">
                 Engineering & Co.
               </div>
             </div>
