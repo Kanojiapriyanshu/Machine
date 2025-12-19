@@ -84,7 +84,7 @@ export default function Gallery() {
           display: flex;
           align-items: stretch;
           /* ensure the marquee is twice the width of the viewport content because we duplicated the array */
-          animation: marquee-rt 28s linear infinite;
+          animation: marquee-rt 15s linear infinite;
           will-change: transform;
           /* Smooth backface */
         }

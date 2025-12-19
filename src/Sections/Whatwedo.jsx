@@ -45,82 +45,89 @@ const items = [
 
 export default function WhatWeDo() {
   return (
-    <section id="industries" className="w-full bg-white">
-      <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-14">
+    <section id="industries" className="w-full bg-white mt-20">
 
-        {/* === TRUE 50-50 FLEX GRID === */}
-        <div className="flex flex-col md:flex-row w-full">
+      {/* OUTER CONNECTED FRAME */}
+      <div className="w-full border-y border-gray-200">
 
-          {/* LEFT SIDE (50%) */}
-          <div className="w-full md:w-1/2 pr-0 md:pr-12">
-            <div className="space-y-10">
-              {items.map((item) => (
-                <div key={item.id} className="flex items-start gap-6">
-                  
-                  <div className="w-12 flex-shrink-0 mt-1">
-                    <img
-                      src={item.icon}
-                      alt={`${item.title} icon`}
-                      className="w-8 h-8 md:w-6 md:h-10"
-                    />
+        <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
+
+          {/* FLEX GRID */}
+          <div className="flex flex-col md:flex-row">
+
+            {/* LEFT (50%) */}
+            <div className="w-full md:w-1/2 py-14 pr-0 md:pr-12">
+              <div className="space-y-10">
+                {items.map((item) => (
+                  <div key={item.id} className="flex items-start gap-6">
+                    
+                    <div className="w-12 flex-shrink-0 mt-1">
+                      <img
+                        src={item.icon}
+                        alt={`${item.title} icon`}
+                        className="w-8 h-8 md:w-6 md:h-10"
+                      />
+                    </div>
+
+                    <div className="flex-1">
+                      <h3 className="text-[20px] md:text-[22px] font-medium text-[#1f2b2d]">
+                        {item.title}
+                      </h3>
+                      <p className="mt-3 text-sm md:text-[15px] text-[#465656] leading-relaxed max-w-[720px]">
+                        {item.desc}
+                      </p>
+                    </div>
+
                   </div>
+                ))}
+              </div>
+            </div>
 
-                  <div className="flex-1">
-                    <h3 className="text-[20px] md:text-[22px] font-medium text-[#1f2b2d]">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm md:text-[15px] text-[#465656] leading-relaxed max-w-[720px]">
-                      {item.desc}
-                    </p>
-                  </div>
+            {/* VERTICAL CONNECTED DIVIDER */}
+            <div className="hidden md:flex justify-center">
+              <div className="w-px bg-gray-200 h-full" />
+            </div>
 
+            {/* RIGHT (50%) */}
+            <div className="w-full md:w-1/2 py-14 pl-0 md:pl-12 flex items-start">
+              <div>
+                <div className="text-sm tracking-wider text-[#6b7a79]">
+                  WHAT WE DO
                 </div>
-              ))}
+
+                <h2
+                  className="font-serif text-[#1f2b2d] mt-4"
+                  style={{
+                    fontSize: "3.2rem",
+                    lineHeight: 1.05,
+                    fontWeight: 300,
+                    maxWidth: "520px",
+                  }}
+                >
+                  Industries We serve
+                </h2>
+
+                <a
+                  href="/contact"
+                  className="mt-6 inline-flex items-center gap-3 text-black font-medium"
+                >
+                  <span>Contact us</span>
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M5 12h14M13 5l7 7-7 7"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
 
-          {/* CENTER DIVIDER */}
-          <div className="hidden md:block w-px bg-gray-200 mx-8" />
-
-          {/* RIGHT SIDE (50%) */}
-          <div className="w-full md:w-1/2 pl-0 md:pl-12 mt-10 md:mt-0">
-            <div className="">
-              <div className="text-sm tracking-wider text-[#6b7a79]">WHAT WE DO</div>
-
-              <h2
-                className="font-serif text-[#1f2b2d] mt-4"
-                style={{
-                  fontSize: "3.2rem",
-                  lineHeight: 1.05,
-                  fontWeight: 300,
-                  maxWidth: "520px",
-                }}
-              >
-                Industries We serve
-              </h2>
-
-              <a
-                href="/contact"
-                className="mt-6 inline-flex items-center gap-3 text-black font-medium"
-              >
-                <span>Contact us</span>
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M5 12h14M13 5l7 7-7 7"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
       </div>
-
-      {/* Bottom border */}
-      <div className="h-px bg-gray-200" />
     </section>
   );
 }
