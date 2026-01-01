@@ -50,13 +50,13 @@ export default function WhatWeDo() {
       {/* OUTER CONNECTED FRAME */}
       <div className="w-full border-y border-gray-200">
 
-        <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
+        <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto px-8 md:px-12 lg:px-20 xl:px-27">
 
           {/* FLEX GRID */}
           <div className="flex flex-col md:flex-row">
 
             {/* LEFT (50%) */}
-            <div className="w-full md:w-1/2 py-14 pr-0 md:pr-12">
+            <div className="w-full md:w-1/2 py-8 md:py-14 pr-0 md:pr-12">
               <div className="space-y-10">
                 {items.map((item) => (
                   <div key={item.id} className="flex items-start gap-6">
@@ -89,16 +89,15 @@ export default function WhatWeDo() {
             </div>
 
             {/* RIGHT (50%) */}
-            <div className="w-full md:w-1/2 py-14 pl-0 md:pl-12 flex items-start">
+            <div className="w-full md:w-1/2 py-8 md:py-14 pl-0 md:pl-12 flex items-start border-t md:border-t-0 border-gray-200 pt-8 md:pt-0 mt-14">
               <div>
                 <div className="text-sm tracking-wider text-[#6b7a79]">
                   WHAT WE DO
                 </div>
 
                 <h2
-                  className="font-serif text-[#1f2b2d] mt-4"
+                  className="font-serif text-[#1f2b2d] mt-4 text-[2rem] md:text-[3.2rem] xl:text-[4.3rem]"
                   style={{
-                    fontSize: "3.2rem",
                     lineHeight: 1.05,
                     fontWeight: 300,
                     maxWidth: "520px",

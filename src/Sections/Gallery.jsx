@@ -26,15 +26,15 @@ const IMAGES = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img
 export default function Gallery() {
   return (
     <section className="w-full bg-white">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pt-12 pb-6">
+      <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 xl:px-32 pt-8 md:pt-12 pb-4 md:pb-6">
         {/* Header: left label + big serif title; right description */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-start mb-4 md:mb-6">
           {/* Left label + big title */}
           <div className="md:col-span-5">
-            <div className="text-sm tracking-wider text-[#6b7a79] mb-4">AT A GLANCE</div>
+            <div className="text-xs md:text-sm tracking-wider text-[#6b7a79] mb-3 md:mb-4">AT A GLANCE</div>
             <h2
-              className="font-serif text-[#16202a]"
-              style={{ fontSize: "3.4rem", lineHeight: 1.02, fontWeight: 300 }}
+              className="font-serif text-[#16202a] text-[2rem] md:text-[3.4rem] xl:text-[4.5rem]"
+              style={{ lineHeight: 1.02, fontWeight: 300 }}
             >
               Gallery
             </h2>
@@ -42,7 +42,7 @@ export default function Gallery() {
 
           {/* Right description */}
           <div className="md:col-span-7">
-            <p className="text-[#4b5b5b] text-lg leading-relaxed max-w-[740px]">
+            <p className="text-[#4b5b5b] text-sm md:text-lg leading-relaxed max-w-[740px]">
               This Gallery is a curated space where our projects come together to reflect intention, clarity,
               and the craft that defines our work. Each visual captures the design decisions, thought process,
               and simplicity that shape our creative identity.
@@ -60,10 +60,9 @@ export default function Gallery() {
             {[...IMAGES, ...IMAGES].map((src, i) => (
               <div
                 key={i}
-                className="mx-4 flex-shrink-0"
-                style={{ width: "330px" }} /* fixed width for consistent columns; tune if you want wider */
+                className="mx-2 md:mx-4 shrink-0 w-[280px] md:w-[330px] xl:w-[440px]"
               >
-                <div className="h-[420px] bg-gray-100 overflow-hidden border border-gray-100">
+                <div className="h-[350px] md:h-[420px] bg-gray-100 overflow-hidden border border-gray-100">
                   <img
                     src={src}
                     alt={`gallery-${i}`}

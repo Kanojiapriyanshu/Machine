@@ -13,7 +13,7 @@ export default function Header() {
 
       {/* Header */}
       <div className="bg-white">
-        <div className="max-w-[1440px] mx-auto flex items-center px-6 md:px-10 h-[86px]">
+        <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto flex items-center px-6 md:px-10 xl:px-13 h-[86px]">
 
           {/* LOGO LEFT */}
           <a href="/" className="flex items-center gap-4">
@@ -49,7 +49,7 @@ export default function Header() {
             {/* CONTACT BUTTON — gives mail popup */}
             <a
               href="mailto:info@energeticengineering.in"
-              className="hidden md:flex items-center justify-center px-12 py-4 font-semibold text-gray-900"
+              className="hidden md:flex items-center justify-center px-12 xl:px-16 py-4 font-semibold text-gray-900"
               style={{ backgroundColor: "rgb(232,250,153)" }}
             >
               Contact us
@@ -58,16 +58,17 @@ export default function Header() {
             {/* MOBILE MENU BUTTON */}
             <button
               onClick={() => setOpen((s) => !s)}
-              className="md:hidden p-2"
+              className="md:hidden p-2 text-gray-700"
+              aria-label="Toggle menu"
             >
-              <svg className="w-6 h-6" strokeWidth="2">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {open ? (
-                  <path d="M6 18L18 6M6 6l12 12" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
                   <>
-                    <path d="M3 6h18" />
-                    <path d="M3 12h18" />
-                    <path d="M3 18h18" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6h18" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h18" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 18h18" />
                   </>
                 )}
               </svg>

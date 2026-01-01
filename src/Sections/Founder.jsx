@@ -9,13 +9,13 @@ export default function Founder() {
       {/* OUTER EDGE-TO-EDGE FRAME */}
       <div className="border-y border-gray-200 w-full">
 
-        <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
+        <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 xl:px-27">
 
           {/* GRID WITH CONNECTED VERTICAL LINE */}
           <div className="grid grid-cols-12">
 
             {/* LEFT: IMAGE */}
-            <div className="col-span-12 md:col-span-5 py-14">
+            <div className="col-span-12 md:col-span-5 py-8 md:py-14">
               <div className="border border-gray-200 p-6 bg-white">
                 <div className="border border-gray-100 p-4">
                   <img
@@ -33,12 +33,12 @@ export default function Founder() {
             </div>
 
             {/* RIGHT: CONTENT */}
-            <div className="col-span-12 md:col-span-6 py-14 flex flex-col">
+            <div className="col-span-12 md:col-span-6 py-8 md:py-14 flex flex-col border-t md:border-t-0 border-gray-200 pt-8 md:pt-0">
 
               {/* TITLE BOX */}
               <div className="border border-gray-200 px-6 py-4 mb-6">
-                <h3 className="font-serif text-[#16202a] text-[36px] font-weight-400">
-                  Founder’s Message
+                <h3 className="font-serif text-[#16202a] text-[24px] md:text-[36px] xl:text-[48px] font-weight-400">
+                  Founder's Message
                 </h3>
               </div>
 

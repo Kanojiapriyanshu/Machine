@@ -20,14 +20,14 @@ export default function Clients() {
     <section id="clients" className="w-full bg-white">
 
       {/* Title Section (centered) */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10 py-16">
-        <p className="text-[13px] tracking-[1.5px] text-[#6b7a79] uppercase">
+      <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto px-4 md:px-12 xl:px-32 py-8 md:py-16">
+        <p className="text-[11px] md:text-[13px] tracking-[1.5px] text-[#6b7a79] uppercase">
           Our Clients
         </p>
 
         <h2
-          className="mt-4 font-serif text-[#16202a]"
-          style={{ fontSize: "3rem", lineHeight: 1.05, fontWeight: 300 }}
+          className="mt-3 md:mt-4 font-serif text-[#16202a] text-[1.8rem] md:text-[3rem] xl:text-[4rem]"
+          style={{ lineHeight: 1.05, fontWeight: 300 }}
         >
           Companies we have<br />worked with
         </h2>

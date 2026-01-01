@@ -39,7 +39,7 @@ export default function HowItWorks() {
       <div className="w-full border-t border-gray-200">
 
         {/* HEADER SECTION (LEFT-ALIGNED EXACTLY LIKE SCREENSHOT) */}
-        <div className="max-w-[1400px] mx-auto px-8 md:px-12 lg:px-10 py-64">
+        <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 xl:px-32 py-12 md:py-32 xl:py-85">
 
           <div className="max-w-3xl">
 
@@ -50,9 +50,8 @@ export default function HowItWorks() {
 
             {/* Main heading */}
             <h2
-              className="font-serif text-[#16202a] mt-4 leading-tight"
+              className="font-serif text-[#16202a] mt-4 leading-tight text-[1.8rem] md:text-[2.8rem] xl:text-[3.7rem]"
               style={{
-                fontSize: "2.8rem",
                 fontWeight: 300
               }}
             >
@@ -75,7 +74,7 @@ export default function HowItWorks() {
           {steps.map((s) => (
             <div
               key={s.id}
-              className="bg-white p-10 md:p-12 border-gray-200 border-b sm:border-b md:border-b-0 md:border-r last:border-r-0"
+              className="bg-white p-6 md:p-12 border-gray-200 border-b sm:border-b md:border-b-0 md:border-r last:border-r-0"
             >
               {/* Step number */}
               <div className="text-2xl md:text-3xl text-gray-300 font-medium">

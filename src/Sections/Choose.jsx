@@ -57,22 +57,21 @@ export default function Choose() {
       {/* OUTER CONNECTED FRAME */}
       <div className="w-full border-y border-gray-200">
 
-        <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
+        <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto px-8 md:px-12 lg:px-20 xl:px-27">
 
           {/* TRUE 50–50 LAYOUT */}
           <div className="flex flex-col md:flex-row">
 
             {/* LEFT SIDE */}
-            <div className="w-full md:w-1/2 py-16 pr-0 md:pr-12">
+            <div className="w-full md:w-1/2 py-8 md:py-16 pr-0 md:pr-12">
               <div>
                 <div className="text-sm tracking-wider text-[#6b7a79] uppercase">
                   WHY CHOOSE US
                 </div>
 
                 <h2
-                  className="font-serif text-[#1f2b2d] mt-4"
+                  className="font-serif text-[#1f2b2d] mt-4 text-[1.8rem] md:text-[2.8rem] xl:text-[3.7rem]"
                   style={{
-                    fontSize: "2.8rem",
                     lineHeight: 1.05,
                     fontWeight: 300,
                     maxWidth: "520px",
@@ -112,7 +111,7 @@ export default function Choose() {
             </div>
 
             {/* RIGHT SIDE */}
-            <div className="w-full md:w-1/2 py-16 pl-0 md:pl-12">
+            <div className="w-full md:w-1/2 py-8 md:py-16 pl-0 md:pl-12 border-t md:border-t-0 border-gray-200 pt-8 md:pt-0 mt-14">
               <div className="space-y-8">
                 {features.map((f) => (
                   <div key={f.id} className="flex gap-6 items-start">

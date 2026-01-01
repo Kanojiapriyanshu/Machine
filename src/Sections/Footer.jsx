@@ -15,8 +15,8 @@ export default function Footer() {
     <footer className="w-full bg-white text-[#334746]">
       {/* Main footer grid */}
       <div className="w-full border-t border-gray-200">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-12">
-          <div className="grid grid-cols-12 gap-6 items-start">
+        <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 xl:px-32 py-8 md:py-12">
+          <div className="grid grid-cols-12 gap-4 md:gap-6 items-start">
 
             {/* LEFT COLUMN */}
             <div className="col-span-12 md:col-span-4">
@@ -64,8 +64,8 @@ export default function Footer() {
             </div>
 
             {/* RIGHT COLUMN */}
-            <div className="col-span-12 md:col-span-8">
-              <div className="pl-0 md:pl-10 border-l md:border-gray-200">
+            <div className="col-span-12 md:col-span-8 mt-6 md:mt-0">
+              <div className="pl-0 md:pl-10 border-t md:border-t-0 md:border-l md:border-gray-200 pt-6 md:pt-0">
 
                 {/* NAV LINKS – same as header (#anchors) */}
                 <div className="flex justify-center mb-6">
@@ -210,7 +210,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="w-full bg-white border-t border-gray-100">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-4 flex items-center justify-between text-xs text-[#9aa8a8]">
+        <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 xl:px-27 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#9aa8a8]">
           <div>© 2025 Energetic Engineering Co. All Rights Reserved.</div>
 
           <div className="flex items-center gap-4">

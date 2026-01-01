@@ -10,13 +10,14 @@ export default function Projects() {
   const [showTable, setShowTable] = useState(false);
 
   return (
-    <section id="projects" className="w-full bg-white py-12 px-6 md:px-20">
+    <section id="projects" className="w-full bg-white py-8 md:py-12 px-4 md:px-12 xl:px-32">
 
       {/* ================= HEADER ================= */}
-      <div className="flex justify-between items-start w-full mb-10">
+      <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto">
+      <div className="flex flex-col sm:flex-row justify-between items-start w-full mb-6 md:mb-10 gap-4">
         <div>
           <p className="text-xs tracking-wide text-[#4b5c5a] mb-2">OUR PROJECTS</p>
-          <h2 className="text-[42px] leading-tight font-serif text-[#1B2D2A]">
+          <h2 className="text-[28px] md:text-[42px] xl:text-[56px] leading-tight font-serif text-[#1B2D2A]">
             Our Concurrent <br /> Projects
           </h2>
         </div>
@@ -24,7 +25,7 @@ export default function Projects() {
         {/* Toggle Button */}
         <button
           onClick={() => setShowTable(!showTable)}
-          className="flex items-center gap-2 text-sm text-[#1B2D2A] hover:text-black transition"
+          className="flex items-center gap-2 text-sm text-[#1B2D2A] hover:text-black transition self-start sm:self-auto"
         >
           {showTable ? "Show Images" : "View Last 3yr Projects"}
           <span className="text-lg">↗</span>
@@ -32,7 +33,7 @@ export default function Projects() {
       </div>
 
       {/* Subtitle */}
-      <p className="text-sm text-[#5b6f6d] mt-2 mb-10 max-w-2xl">
+      <p className="text-sm text-[#5b6f6d] mt-2 mb-6 md:mb-10 max-w-2xl">
         View the latest projects highlighting our execution capabilities — hover any image to view a short caption.
       </p>
 
@@ -183,7 +184,7 @@ export default function Projects() {
           </table>
         </div>
       )}
-
+      </div>
     </section>
   );
 }

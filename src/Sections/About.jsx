@@ -8,17 +8,16 @@ export default function About() {
       {/* FULL-WIDTH FRAME */}
       <div className="w-full border-y border-gray-200 mt-20">
 
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto">
 
           {/* 50 / 50 GRID WITH CONNECTED DIVIDER */}
-          <div className="grid grid-cols-[1fr_1px_1fr] items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] items-stretch">
 
             {/* LEFT SIDE */}
-            <div className="px-8 md:px-12 lg:px-20 py-24 flex items-center">
+            <div className="px-6 md:px-12 lg:px-20 xl:px-27 py-12 md:py-24 xl:py-32 flex items-center">
               <h2
-                className="font-serif text-[#1f2933]"
+                className="font-serif text-[#1f2933] text-[2.5rem] md:text-[4.6rem] xl:text-[6.1rem]"
                 style={{
-                  fontSize: "4.6rem",
                   fontWeight: 300,
                   lineHeight: 1.05,
                 }}
@@ -28,10 +27,10 @@ export default function About() {
             </div>
 
             {/* VERTICAL DIVIDER — EDGE TO EDGE */}
-            <div className="bg-gray-200" />
+            <div className="hidden md:block bg-gray-200" />
 
             {/* RIGHT SIDE */}
-            <div className="px-8 md:px-12 lg:px-20 py-20 flex items-center">
+            <div className="px-6 md:px-12 lg:px-20 xl:px-27 py-12 md:py-20 xl:py-27 flex items-center border-t md:border-t-0 border-gray-200">
               <div className="w-full border border-gray-200">
 
                 {/* TEXT BLOCK */}

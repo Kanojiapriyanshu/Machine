@@ -39,13 +39,12 @@ export default function Count() {
           {[...METRICS, ...METRICS].map((m, idx) => (
             <div
               key={idx}
-              className="inline-flex flex-col items-center justify-center px-12 py-6"
-              style={{ minWidth: 260 }} // controls spacing / how many visible; tweak if needed
+              className="inline-flex flex-col items-center justify-center px-12 py-6 min-w-[260px] xl:min-w-[346px]"
             >
               {/* Large serif number — match the screenshot */}
               <div
-                className="font-sans-serif text-[#16202a] font-semibold"
-                style={{ fontSize: "48px", lineHeight: 1 }}
+                className="font-sans-serif text-[#16202a] font-semibold text-[48px] xl:text-[64px]"
+                style={{ lineHeight: 1 }}
               >
                 {m.value}
               </div>
@@ -91,6 +90,9 @@ export default function Count() {
         @media (max-width: 640px) {
           .count-marquee { animation-duration: ${Math.round(ANIM_DURATION * 1.25)}s; }
           .count-marquee > div { min-width: 160px !important; padding-left: 8px; padding-right: 8px; }
+        }
+        @media (min-width: 1280px) {
+          .count-marquee > div { min-width: 346px !important; }
         }
       `}</style>
     </section>

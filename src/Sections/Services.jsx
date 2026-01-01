@@ -60,9 +60,9 @@ export default function Services() {
   return (
     <section id="services" className="w-full bg-white">
       {/* Heading (full-width) */}
-      <div className="w-full px-6 md:px-12 lg:px-24 py-12 max-w-none">
-        <p className="text-lg tracking-wide text-[#4b5c5a]">OUR CORE SERVICES</p>
-        <h2 className="text-3xl md:text-4xl font-serif text-[#1B2D2A] leading-tight">
+      <div className="w-full px-4 md:px-12 lg:px-24 xl:px-32 py-8 md:py-12 max-w-none">
+        <p className="text-sm md:text-lg tracking-wide text-[#4b5c5a]">OUR CORE SERVICES</p>
+        <h2 className="text-2xl md:text-4xl xl:text-5xl font-serif text-[#1B2D2A] leading-tight mt-2">
           Expertise That Drives <br /> Industrial Performance
         </h2>
       </div>
@@ -72,17 +72,16 @@ export default function Services() {
         <div className="w-full h-full">
           {SERVICES.map((s, idx) => {
             const isAlt = idx % 2 === 1;
-            const zIndex = idx + 1; // higher index on top
 
             return (
               <div
                 key={s.id}
-                className="w-full h-screen sticky top-0 flex items-center"
-                style={{ zIndex }}
+                className="w-full min-h-[90vh] md:h-screen md:sticky md:top-0 flex items-center"
+                style={{ zIndex: idx + 1 }}
               >
-                <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch h-full">
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[90vh] md:h-full">
                   {/* LEFT: image */}
-                  <div className="w-full h-full">
+                  <div className="w-full h-[40vh] md:h-full">
                     <img
                       src={s.img}
                       alt={s.title}
@@ -92,15 +91,15 @@ export default function Services() {
 
                   {/* RIGHT: content (centered) */}
                   <div
-                    className={`flex items-center justify-center p-10 md:p-16 border-t md:border-t-0 md:border-l border-gray-200 ${
+                    className={`flex items-center justify-center p-6 md:p-16 border-t md:border-t-0 md:border-l border-gray-200 min-h-[50vh] md:min-h-0 ${
                       isAlt ? "bg-[#E6F89B]" : "bg-white"
                     }`}
                   >
-                    <div className="max-w-[720px] text-left mb-150">
-                      <h3 className="font-serif text-2xl md:text-3xl leading-snug text-[#142f2a]">
+                    <div className="max-w-[720px] xl:max-w-[960px] text-left w-full px-4 md:px-0">
+                      <h3 className="font-serif text-xl md:text-3xl xl:text-4xl leading-snug text-[#142f2a]">
                         {s.title}
                       </h3>
-                      <p className="mt-4 text-sm md:text-base text-[#4b5b5b]">
+                      <p className="mt-3 md:mt-4 text-sm md:text-base xl:text-lg text-[#4b5b5b] leading-relaxed">
                         {s.desc}
                       </p>
                     </div>

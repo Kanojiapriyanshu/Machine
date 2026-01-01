@@ -8,7 +8,7 @@ export default function Contact() {
       <div className="absolute top-0 bottom-0 left-1/3 w-px bg-gray-200" />
       <div className="absolute top-0 bottom-0 left-2/3 w-px bg-gray-200" />
 
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-24 relative">
+      <div className="max-w-[1440px] xl:max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 xl:px-27 py-12 md:py-24 xl:py-32 relative">
 
         {/* ====== HORIZONTAL LINE TOP ====== */}
         
@@ -19,14 +19,13 @@ export default function Contact() {
 
             {/* ====== HEADING ====== */}
             <h2
-              className="font-serif text-[#16202a]"
+              className="font-serif text-[#16202a] text-[2rem] md:text-[3.6rem] xl:text-[4.8rem]"
               style={{
-                fontSize: "3.6rem",
                 lineHeight: "1.1",
                 fontWeight: "700",
               }}
             >
-              Let’s Build Your Next
+              Let's Build Your Next
               <br />
               Industrial Project
             </h2>
